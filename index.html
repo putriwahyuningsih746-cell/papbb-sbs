@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PAPBB – Kejaksaan Negeri Subulussalam</title>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    /* ================= BACKGROUND ================= */
+    /* Rekomendasi ukuran gambar:
+       Desktop: 1920x1080
+       Aman fleksibel: 2000x2000 (square high-res)
+    */
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #1f1f1f;
+      background: url('background.png') center/cover no-repeat fixed;
+    }
+
+    .overlay {
+      min-height: 100vh;
+      background: rgba(255,255,255,0.78);
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px 80px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    /* ================= HEADER + LOGO ================= */
+
+    .header-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .header-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+    }
+
+    .header-text {
+      flex: 1;
+    }
+
+    .header-text h1 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .header-text h2 {
+      font-size: 13px;
+      font-weight: 400;
+      margin-top: 4px;
+      color: #555;
+    }
+
+    /* ================= CARD ================= */
+
+    .card {
+      background: #ffffffcc;
+      border-radius: 16px;
+      padding: 16px;
+      margin: 18px 0;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* ================= MENU ================= */
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #f2f2f2;
+      margin: 14px 0;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .menu:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(0,0,0,0.12);
+    }
+
+    .menu img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .menu span {
+      font-weight: 600;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    /* ================= SOCIAL ICON ================= */
+
+    .social {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 28px;
+    }
+
+    .social a {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #1f1f1f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+
+    /* ================= MUSIC BUTTON ================= */
+
+    .music-control {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      background: #1f1f1f;
+      color: #fff;
+      border-radius: 50px;
+      padding: 10px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- AUDIO -->
+  <audio id="bgMusic" loop>
+    <source src="musik.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="overlay">
+    <div class="container">
+
+      <!-- HEADER + LOGO -->
+      <div class="header-wrap">
+        <img src="logo1.png" class="header-logo" alt="Logo Kejaksaan">
+
+        <div class="header-text">
+          <h1>KEJAKSAAN NEGERI</h1>
+          <h1>SUBULUSSALAM</h1>
+          <h2>Media Informasi dan Pelayanan PAPBB</h2>
+        </div>
+
+        <img src="logo2.png" class="header-logo" alt="Logo PAPBB">
+      </div>
+
+      <!-- CARD -->
+      <div class="card">
+        <h3>PAPBB</h3>
+        <p>
+          Media Informasi dan Pelayanan<br>
+          Pada Bidang PAPBB<br>
+          Kejaksaan Negeri Subulussalam
+        </p>
+      </div>
+
+      <!-- MENU -->
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc43__ezYmEUfiZYoxGgOePz9w1uB4RFCZ6ioe66B5ZdMwMew/viewform?usp=header" class="menu">
+        <img src="ogekjabi.png">
+        <span>OGEK JAKSA ANTAR BARANG BUKTI</span>
+      </a>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd3CvyjDvEBh3N88jwNKJgFKum-qiIl_wz_b499gAfBk03I9Q/viewform?usp=header" class="menu">
+        <img src="lelang.png">
+        <span>PENGAMBILAN BARANG LELANG</span>
+      </a>
+
+      <a href="https://wa.me/6282162983978" class="menu">
+        <img src="whatsapp.png">
+        <span>KLIK WHATSAPP KAMI, LANGSUNG RESPON!</span>
+      </a>
+
+      <!-- SOCIAL -->
+      <div class="social">
+        <a href="https://kn.subulussalamkota.go.id/"><img src="web.png"></a>
+        <a href="https://www.tiktok.com/@kejari_subulussalam"><img src="tiktok.png"></a>
+        <a href="https://www.instagram.com/kejari_subulussalam?igsh=Zjh5cjQ4ZWt1YjJk"><img src="instagram.png"></a>
+        <a href="https://www.facebook.com/search/top?q=kejaksaan%20negeri%20subulussalam"><img src="facebook.png"></a>
+        <a href="https://x.com/kn_subulussalam?s=11&t=n_aU_8qf7JqgTFj2C7PmeA"><img src="x.png"></a>
+        <a href="http://www.youtube.com/@kejaksaannegerisubulussala4275"><img src="youtube.png"></a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="music-control" onclick="toggleMusic()">
+    🔊 Musik
+  </div>
+
+  <script>
+    const music = document.getElementById('bgMusic');
+    let playing = false;
+
+    function startMusicOnce() {
+      if (!playing) {
+        music.play().then(() => {
+          playing = true;
+          document.querySelector('.music-control').innerText = '🔈 Musik ON';
+        }).catch(() => {});
+      }
+      document.removeEventListener('click', startMusicOnce);
+    }
+
+    document.addEventListener('click', startMusicOnce);
+
+    function toggleMusic() {
+      if (playing) {
+        music.pause();
+        playing = false;
+        document.querySelector('.music-control').innerText = '🔊 Musik OFF';
+      } else {
+        music.play();
+        playing = true;
+        document.querySelector('.music-control').innerText = '🔈 Musik ON';
+      }
+    }
+  </script>
+
+</body>
+</html>
